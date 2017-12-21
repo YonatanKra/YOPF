@@ -4,6 +4,11 @@ const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
+    devtool: 'inline-source-map',
+    devServer: {
+        open: true,
+        contentBase: './dist'
+    },
     entry: './src/app.js', // this is our app
     output: {
         filename: '[name].bundle.js', // the file name would be my entry's name with a ".bundle.js" suffix
