@@ -6,11 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
+    "dev": "webpack-dev-server"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "fireworks": "^2.1.1"
   },
   "devDependencies": {
     "webpack": "^3.10.0"
