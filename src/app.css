@@ -1,0 +1,10 @@
+#phrase-form-wrapper {
+    min-height: 50px;
+    background: rgba(125, 125, 0, .25);
+    margin-bottom: 5px;
+}
+
+#phrase-fireworks-wrapper {
+    height: 450px;
+    outline: 1px red solid;
+}
