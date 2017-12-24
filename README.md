@@ -1,5 +1,5 @@
 # YOPF
-Your Phrase Fireworks app
+Your Phrase Fireworks app. Demo at: https://yonatankra.github.io/YOPF/
 
 ## Usage:
 `npm i`
