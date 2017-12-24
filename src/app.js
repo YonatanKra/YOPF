@@ -4,6 +4,9 @@ const styles = import ('./app.css');
 import YOPFForm from './form/form.index';
 import YOPFFireworks from './fireworks/fireworks.index';
 
+import 'jquery';
+import 'bootstrap/dist/js/bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 (async function() {
     function onPhraseChange(phrase) {
         fireworks.doFireworks(phrase);
