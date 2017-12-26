@@ -1,6 +1,8 @@
 const fireworks = require('fireworks');
+
 // get the styles
-const styles = import('./fireworks.css');
+import {} from './fireworks.css';
+
 
 class YOPFFireworks{
     constructor(element) {
@@ -41,4 +43,4 @@ class YOPFFireworks{
         this._interval = null;
     }
 }
-module.exports = YOPFFireworks;
+export default YOPFFireworks;

@@ -53,6 +53,10 @@ module.exports = {
                     'style-loader',
                     'css-loader'
                 ]
+            },
+            {
+                test: /\.js$/,
+                loader: 'babel-loader',
             }
         ]
     }

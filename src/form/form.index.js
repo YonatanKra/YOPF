@@ -1,7 +1,7 @@
 // get the template
-const template = import('./form.index.html');
+import * as template from './form.index.html';
 // get the styles
-const styles = import('./form.index.css');
+import {} from './form.index.css';
 
 class YOPFForm{
     constructor(element) {
@@ -29,4 +29,5 @@ class YOPFForm{
     }
 }
 
-module.exports = YOPFForm;
+
+export default YOPFForm;
