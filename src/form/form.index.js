@@ -1,7 +1,7 @@
 // get the template
-const template = import('./form.index.html');
+import template from './form.index.html';
 // get the styles
-const styles = import('./form.index.css');
+import {} from './form.index.css';
 
 class YOPFForm{
     constructor(element) {
@@ -9,8 +9,8 @@ class YOPFForm{
         this.setTemplate();
     }
 
-    async setTemplate() {
-        this._element.innerHTML = await template;
+    setTemplate() {
+        this._element.innerHTML = template;
         this._form = this._element.getElementsByTagName('form')[0];
         this._form.addEventListener("submit", (event)=> {
             event.preventDefault();
@@ -29,4 +29,4 @@ class YOPFForm{
     }
 }
 
-module.exports = YOPFForm;
+export default YOPFForm;
