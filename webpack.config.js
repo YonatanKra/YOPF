@@ -12,6 +12,7 @@ module.exports = {
     },
     entry: ['./src/app.js'], // this is our app
     output: {
+        chunkFilename: '[name].bundle.js',
         filename: '[name].bundle.js', // the file name would be my entry's name with a ".bundle.js" suffix
         path: path.resolve(__dirname, 'dist') // put all of the build in a dist folder
     },
