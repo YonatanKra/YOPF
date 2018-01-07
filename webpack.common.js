@@ -33,30 +33,22 @@ module.exports = {
         })
     ],
     module: {
-        rules: [
+        loaders: [
             // use the url loader for font files
             {
                 test: /\.(woff2?|ttf|eot|svg)$/,
-                use: [
-                    {
-                        loader: 'url-loader',
-                        options: {
-                            limit: 10000,
-                            name: 'fonts/[name].[ext]'
-                        }
-                    }
-                ]
+                loaders: ['url-loader?limit=10000&name=fonts/[name].[ext]']
             },
             // use the html loader
             {
                 test: /\.html$/,
                 exclude: /node_modules/,
-                use: [{loader: 'html-loader'}]
+                loaders: ['html-loader']
             },
             // use the css loaders (first load the css, then inject the style)
             {
                 test: /\.css$/,
-                use: [
+                loaders: [
                     'style-loader',
                     'css-loader'
                 ]

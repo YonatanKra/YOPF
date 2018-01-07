@@ -1,7 +1,7 @@
 // get the template
-import template from './form.index.html';
+var template = require('./form.index.html');
 // get the styles
-import {} from './form.index.css';
+require('./form.index.css');
 
 class YOPFForm{
     constructor(element) {
@@ -29,4 +29,4 @@ class YOPFForm{
     }
 }
 
-export default YOPFForm;
+module.exports = YOPFForm;
