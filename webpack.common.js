@@ -5,8 +5,8 @@ const webpack = require('webpack');
 module.exports = {
     entry: ['./src/app.js'], // this is our app
     output: {
-        chunkFilename: 'scripts/[name].bundle.js',
-        filename: 'scripts/[name].bundle.js', // the file name would be my entry's name with a ".bundle.js" suffix
+        chunkFilename: 'scripts/[name].[chunkhash].bundle.js',
+        filename: 'scripts/[name].[chunkhash].bundle.js', // the file name would be my entry's name with a ".bundle.js" suffix
         path: path.resolve(__dirname, 'dist') // put all of the build in a dist folder
     },
     plugins: [
