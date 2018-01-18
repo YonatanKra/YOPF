@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
-    entry: ['./src/app.js'], // this is our app
+    entry: ['babel-polyfill', './src/app.js'], // this is our app
     output: {
         chunkFilename: 'scripts/[name].[chunkhash].bundle.js',
         filename: 'scripts/[name].[chunkhash].bundle.js', // the file name would be my entry's name with a ".bundle.js" suffix
@@ -52,6 +52,14 @@ module.exports = {
                 test: /\.html$/,
                 exclude: /node_modules/,
                 use: [{loader: 'html-loader'}]
+            },
+            {
+                test: /\.js$/,
+                loader: 'babel-loader',
+                options: {
+                    plugins: ['syntax-dynamic-import'],
+                    presets: ["@babel/env"]
+                }
             },
             // use the css loaders (first load the css, then inject the style)
             {
